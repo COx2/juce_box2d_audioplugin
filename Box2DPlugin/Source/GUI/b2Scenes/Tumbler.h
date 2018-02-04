@@ -12,6 +12,9 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "../b2SceneBase.h"
+#include "../b2Tools/RayCastTools.h"
+
+#include <queue>
 
 class Tumbler : public b2SceneBase
 {
@@ -75,11 +78,38 @@ public:
 			shape.SetAsBox(0.125f, 0.125f);
 			body->CreateFixture(&shape, 1.0f);
 
+			particle_refs.push(body);
+
 			++m_count;
+
+		}
+		
+		if (m_count > 300) {
+			b2Body* target = particle_refs.front();
+			m_world->DestroyBody(target);
+			particle_refs.pop();
+
+			--m_count;
 		}
 
 		m_world->Step(1.0/settings->hz, settings->velocityIterations, settings->positionIterations);
+
 	}
+
+	void MouseDown(const b2Vec2& point) override
+	{
+		RayCastBodyCallback callback;
+		b2Vec2 delta(2.0, 2.0);
+		b2Vec2 point1(0.0f, 0.0f);
+		m_world->RayCast(&callback, point, point1);
+
+		if (callback.m_body) 
+		{
+//			m_world->DestroyBody(callback.m_body);
+			callback.m_body->ApplyForce(point, point1);
+		}
+
+	};
 
 	static b2SceneBase* Create()
 	{
@@ -88,4 +118,6 @@ public:
 
 	b2RevoluteJoint* m_joint;
 	int32 m_count;
+
+	std::queue<b2Body*> particle_refs;
 };

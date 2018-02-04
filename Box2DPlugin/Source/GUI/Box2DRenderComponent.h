@@ -24,17 +24,16 @@ public:
 
 	void paint(Graphics& g) override
 	{
-		g.fillAll(Colours::white);
+		g.fillAll(Colours::darkcyan);
 
 		if (currentScene != nullptr)
 		{
-			Box2DRenderer renderer;
-
 			renderer.render(g,
 				*currentScene->m_world,
 				-24.0f, 24.0f, 24.0f, -24.0f,
 				getLocalBounds().toFloat().reduced(0.0f)
 			);
+
 		}
 	}
 
@@ -50,7 +49,7 @@ public:
 	{
 
 		b2Vec2 ps((float32)event.getPosition().getX(), (float32)event.getPosition().getY());
-		currentScene->MouseMove(ps);
+		currentScene->MouseDown(ps);
 
 	};
 
@@ -58,9 +57,10 @@ public:
 	{
 
 		b2Vec2 ps((float32)event.getPosition().getX(), (float32)event.getPosition().getY());
-		currentScene->MouseMove(ps);
-
+		currentScene->MouseUp(ps);
 	};
 
 	ScopedPointer<b2SceneBase> currentScene;
+
+	Box2DRenderer renderer;
 };

@@ -3,9 +3,9 @@
 <JUCERPROJECT id="PNIfmW" name="Box2DPlugin" displaySplashScreen="0" reportAppUsage="0"
               splashScreenColour="Dark" projectType="audioplug" version="1.0.0"
               bundleIdentifier="com.JuceJapan.Box2DPlugin" includeBinaryInAppConfig="1"
-              cppLanguageStandard="11" companyCopyright="" buildVST="1" buildVST3="0"
-              buildAU="1" buildAUv3="0" buildRTAS="0" buildAAX="0" buildStandalone="1"
-              enableIAA="0" pluginName="Box2DPlugin" pluginDesc="Box2DPlugin"
+              cppLanguageStandard="11" companyCopyright="JUCE JAPAN" buildVST="1"
+              buildVST3="0" buildAU="1" buildAUv3="0" buildRTAS="0" buildAAX="0"
+              buildStandalone="1" enableIAA="0" pluginName="Box2DPlugin" pluginDesc="Box2DPlugin"
               pluginManufacturer="Juce Japan" pluginManufacturerCode="Manu"
               pluginCode="Pnif" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="1"
               pluginProducesMidiOut="1" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="1"
@@ -15,6 +15,9 @@
   <MAINGROUP id="QK4ur4" name="Box2DPlugin">
     <GROUP id="{2F67CBC4-5BF0-9390-F0DC-7DAD1EB895FF}" name="Source">
       <GROUP id="{574D4858-18A7-66BA-E29C-0CC8962DEA71}" name="GUI">
+        <GROUP id="{78684652-DE1A-6ABB-6BFE-86C5AA8DA0CE}" name="b2Tools">
+          <FILE id="aCQlFa" name="RayCastTools.h" compile="0" resource="0" file="Source/GUI/b2Tools/RayCastTools.h"/>
+        </GROUP>
         <GROUP id="{15A58AA0-8F17-4F85-158D-6821A096F3E4}" name="b2Scenes">
           <FILE id="NW5ZXG" name="Tumbler.h" compile="0" resource="0" file="Source/GUI/b2Scenes/Tumbler.h"/>
         </GROUP>
