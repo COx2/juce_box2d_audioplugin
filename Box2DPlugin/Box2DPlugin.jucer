@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="PNIfmW" name="Box2DPlugin" displaySplashScreen="0" reportAppUsage="0"
+              splashScreenColour="Dark" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="com.JuceJapan.Box2DPlugin" includeBinaryInAppConfig="1"
+              cppLanguageStandard="11" companyCopyright="" buildVST="1" buildVST3="0"
+              buildAU="1" buildAUv3="0" buildRTAS="0" buildAAX="0" buildStandalone="1"
+              enableIAA="0" pluginName="Box2DPlugin" pluginDesc="Box2DPlugin"
+              pluginManufacturer="Juce Japan" pluginManufacturerCode="Manu"
+              pluginCode="Pnif" pluginChannelConfigs="" pluginIsSynth="0" pluginWantsMidiIn="1"
+              pluginProducesMidiOut="1" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="1"
+              pluginAUExportPrefix="Box2DPluginAU" pluginRTASCategory="" aaxIdentifier="com.yourcompany.Box2DPlugin"
+              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="5.2.0"
+              companyName="JUCE JAPAN">
+  <MAINGROUP id="QK4ur4" name="Box2DPlugin">
+    <GROUP id="{2F67CBC4-5BF0-9390-F0DC-7DAD1EB895FF}" name="Source">
+      <GROUP id="{574D4858-18A7-66BA-E29C-0CC8962DEA71}" name="GUI">
+        <GROUP id="{15A58AA0-8F17-4F85-158D-6821A096F3E4}" name="b2Scenes">
+          <FILE id="NW5ZXG" name="Tumbler.h" compile="0" resource="0" file="Source/GUI/b2Scenes/Tumbler.h"/>
+        </GROUP>
+        <FILE id="s9u85U" name="b2SceneBase.h" compile="0" resource="0" file="Source/GUI/b2SceneBase.h"/>
+        <FILE id="pYU9O9" name="Box2DRenderComponent.h" compile="0" resource="0"
+              file="Source/GUI/Box2DRenderComponent.h"/>
+      </GROUP>
+      <FILE id="NHw5za" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="IgUQug" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="cE71HK" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="wjcl7u" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <VS2017 targetFolder="Builds/VisualStudio2017">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="0" isDebug="1" optimisation="1" targetName="Box2DPlugin"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="x64"
+                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
+                       linkTimeOptimisation="1" isDebug="0" optimisation="3" targetName="Box2DPlugin"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_events" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_graphics" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_cryptography" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_video" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_opengl" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+        <MODULEPATH id="juce_box2d" path="C:/SDKs/ROLI/JUCE_latest/modules"/>
+      </MODULEPATHS>
+    </VS2017>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_box2d" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>
